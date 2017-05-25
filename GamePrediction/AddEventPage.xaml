@@ -1,0 +1,37 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GamePrediction"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="GamePrediction.AddEventPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="725"
+      Title="AddEventPage">
+    <Grid>
+        <Label Content="Вид спорта" VerticalAlignment="Top" Margin="283,5,85,0"/>
+        <ComboBox Name="ChooseBox" HorizontalAlignment="Left" Height="23"  VerticalAlignment="Top" Width="280" Margin="192,36,0,0">
+            <System:String>Хоккей</System:String>
+            <System:String>Волейбол</System:String>
+            <System:String>Баскетбол</System:String>
+            <System:String>Футбол</System:String>
+        </ComboBox>
+        <Label Content="Команда 1" HorizontalAlignment="Left" Margin="119,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Команда 2" HorizontalAlignment="Left" Margin="479,62,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="Team1Box" Height="23" Margin="119,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Name="Team2Box" Height="23" Margin="475,97,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.528"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="Дата" HorizontalAlignment="Left" Margin="119,157,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="DatePicker" HorizontalAlignment="Left" Margin="119,200,0,0" VerticalAlignment="Top"/>
+        <Button Content="Далее" Click="ButtonBase_OnClick" Margin="119,0,141,95" Height="101" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Page>
